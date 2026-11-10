@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Profile placeholder">
-  <rect width="200" height="200" fill="#1f4e8c"/>
-  <circle cx="100" cy="80" r="36" fill="#f7f4ee"/>
-  <path d="M40 190 Q100 110 160 190 Z" fill="#f7f4ee"/>
-  <text x="100" y="186" font-family="Georgia, serif" font-size="0" fill="#fff">IL</text>
-</svg>
