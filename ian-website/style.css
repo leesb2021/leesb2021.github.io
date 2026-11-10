@@ -1,0 +1,286 @@
+/* ===== Color scheme (inspired by the Korean flag and hanji paper) ===== */
+:root {
+  --bg: #f7f4ee;        /* warm off-white, like hanji paper */
+  --surface: #ffffff;
+  --ink: #1d2433;       /* deep navy text */
+  --muted: #5b6472;
+  --red: #c8352e;       /* taegeuk red accent */
+  --blue: #1f4e8c;      /* taegeuk blue for links */
+  --border: #e4ddd1;
+}
+
+/* ===== Base typography ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: 3rem; }      /* main heading on Home page */
+h2 { font-size: 2rem; }      /* smaller page heading on Seoul page */
+h3 { font-size: 1.4rem; }
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+a:hover {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+main {
+  padding: 48px 0 64px;
+}
+
+/* ===== Header and navigation ===== */
+.site-header {
+  background: var(--ink);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.4rem;
+  color: #ffffff;
+  border: none;
+}
+
+.brand:hover {
+  color: #ffffff;
+  border: none;
+}
+
+.nav a {
+  color: #d9dde5;
+  margin-left: 24px;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #ffffff;
+  border-bottom: 2px solid var(--red);
+}
+
+/* ===== Home hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--red);
+  margin: 0 0 8px;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--surface);
+  box-shadow: 0 8px 24px rgba(29, 36, 51, 0.15);
+  flex-shrink: 0;
+}
+
+/* ===== Content cards ===== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--blue);
+  border-radius: 10px;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+}
+
+.card p {
+  margin: 0 0 1em;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Contact ===== */
+.contact {
+  border-left-color: var(--red);
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+
+/* ===== Seoul page ===== */
+.page-intro {
+  margin-bottom: 24px;
+}
+
+.feature-image {
+  margin: 0 0 28px;
+}
+
+.feature-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.feature-image figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 8px;
+  text-align: center;
+}
+
+.places {
+  padding-left: 1.4em;
+  margin: 0;
+}
+
+.places li {
+  margin-bottom: 0.6em;
+}
+
+.places li::marker {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* ===== D3 chart ===== */
+.chart {
+  position: relative;
+  width: 100%;
+}
+
+.chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart text {
+  font-family: "Inter", Arial, sans-serif;
+  fill: var(--muted);
+}
+
+.chart .axis-label {
+  font-size: 13px;
+  font-weight: 500;
+  fill: var(--ink);
+}
+
+.chart .grid line {
+  stroke: var(--border);
+}
+
+.chart .grid path {
+  display: none;
+}
+
+.chart .zero-line {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--ink);
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.chart-note,
+.source {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ===== Small screens ===== */
+@media (max-width: 640px) {
+  h1 { font-size: 2.2rem; }
+  .hero { flex-direction: column-reverse; text-align: center; }
+  .card { padding: 24px 20px; }
+  .nav a { margin-left: 14px; }
+}

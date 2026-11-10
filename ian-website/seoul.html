@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ian Lee | Seoul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Ian Lee</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="seoul.html" class="active">Seoul</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="page-intro">
+      <p class="eyebrow">Where I come from</p>
+      <h2>Discovering Seoul</h2>
+    </section>
+
+    <figure class="feature-image">
+      <img src="images/seoul-skyline.svg" alt="Illustration of the Seoul skyline with N Seoul Tower on Namsan and the Han River">
+      <figcaption>Seoul's skyline, with N Seoul Tower on Namsan mountain and the Han River below.</figcaption>
+    </figure>
+
+    <section class="card">
+      <h3>A City of Old and New</h3>
+      <p>
+        Seoul is the capital of South Korea and one of the largest cities in Asia. Roughly 9.4 million people live
+        in the city itself, and the wider capital region is home to about half of the country's population. The Han
+        River runs through the middle of the city from east to west, splitting it into a northern half, where the
+        historic center and royal palaces are, and a southern half, known for neighborhoods like Gangnam.
+      </p>
+      <p>
+        What I love most about Seoul is how easily the old and the new sit side by side. You can walk through
+        Gyeongbokgung, a palace first built in the 14th century during the Joseon dynasty, and ten minutes later be
+        surrounded by glass office towers, neon signs and some of the fastest internet in the world. Traditional
+        hanok houses in Bukchon sit on the same hills as modern apartment blocks, and street food stalls serve
+        tteokbokki and hotteok just outside high-end department stores.
+      </p>
+      <p>
+        Seoul also has four very distinct seasons. Spring brings cherry blossoms along the river, summer is hot,
+        humid and rainy during the monsoon, autumn turns the mountains red and gold, and winter is cold and dry with
+        temperatures often below freezing. The chart below shows how much the average temperature changes over the
+        year. Getting around is easy thanks to an extensive subway network, which makes it simple to explore every
+        corner of the city.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>Seoul's Seasons in Numbers</h3>
+      <p class="chart-note">Average daily temperature by month (°C). Hover over a bar to see the exact value.</p>
+      <div id="temp-chart" class="chart"></div>
+      <p class="source">Source: Korea Meteorological Administration, climate normals 1991–2020.</p>
+    </section>
+
+    <section class="card">
+      <h3>Places I Recommend Visiting</h3>
+      <ol class="places">
+        <li><strong>Gyeongbokgung Palace</strong>: the largest of Seoul's royal palaces, especially beautiful in autumn.</li>
+        <li><strong>Bukchon Hanok Village</strong>: a neighborhood of traditional Korean houses between two palaces.</li>
+        <li><strong>N Seoul Tower</strong>: the best view of the city, at the top of Namsan mountain.</li>
+        <li><strong>Han River parks</strong>: perfect for biking, picnics and night views of the bridges.</li>
+        <li><strong>Gwangjang Market</strong>: one of the oldest markets in Seoul, famous for its street food.</li>
+        <li><strong>Myeongdong</strong>: a busy shopping street full of cosmetics stores and food stalls.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 SungBin (Ian) Lee · <a href="index.html">Back to Home</a></p>
+    </div>
+  </footer>
+
+  <script src="seoul-chart.js"></script>
+</body>
+</html>
